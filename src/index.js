@@ -4,4 +4,4 @@ import App from './App';
 import Search2 from './components/Search2'
 import Translate2 from './components/Translate2'
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<Translate2 />, document.querySelector('#root'));
