@@ -1,5 +1,6 @@
+//感覺老師更愛用RFC，可能RFC寫起來更簡單，實現的功能沒有比較少
 import React, { useState } from 'react';
-import Accordion from './components/Accordion';
+import Accordion2 from './components/Accordion2';
 import Search from './components/Search';
 import Dropdown from './components/Dropdown';
 import Translate from './components/Translate';
@@ -35,6 +36,7 @@ const options = [
     label: 'A Shade of Blue',
     value: 'blue',
   },
+  
 ];
 
 export default () => {
@@ -46,7 +48,7 @@ export default () => {
     <div>
       <Header />
       <Route path="/">
-        <Accordion items={items} />
+        <Accordion2 items={items} />
       </Route>
       <Route path="/list">
         <Search />

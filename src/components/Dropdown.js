@@ -9,12 +9,12 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
       if (ref.current.contains(event.target)) {
         return;
       }
-      //省略else
+
       setOpen(false);
     };
-    //在DOM添加这个event listener
+
     document.body.addEventListener('click', onBodyClick);
-    //记得返回一个cleanup function，下次调用useEffect会先执行这个方法
+
     return () => {
       document.body.removeEventListener('click', onBodyClick);
     };
@@ -22,10 +22,11 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
 
 
   const renderedOptions = options.map((option) => {
-   //若当前项已是组件的状态中保存的项，则此项不渲染
+   //在map方法中先加入判斷，判斷後才渲染list
     if (option.value === selected.value) {
       return null;
     }
+
     return (
       <div
         key={option.value}

@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import Convert2 from './Convert2';
+import Convert2 from '../components/Convert2';
 
-import Dropdown from './Dropdown';
+import Dropdown from '../components/Dropdown';
 
 const options = [
     {
